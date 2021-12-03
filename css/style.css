@@ -252,3 +252,99 @@ height: 650px;
 left: 598px;
 top: 127px;
 }
+.error {
+  position: absolute;
+  left: 75px;
+  top: 485px;
+}
+.error_msg {
+  color: red;
+  font-size: 14px;
+  display: none;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 876px){
+  .header__logo {
+    position: absolute;
+width: 90px;
+height: 27px;
+left: 26px;
+top: 18px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #000000;
+  }
+
+  .login {
+    position: absolute;
+width: 324px;
+height: 641px;
+left: 26px;
+top: 100px;
+
+background: #FFFFFF;
+border: 0.5px solid #878787;
+box-sizing: border-box;
+box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.05);
+border-radius: 10px;
+  }
+  .login-form__welcome{
+    top: 36px;
+    left: 22px;
+  }
+  .login-form__sign {
+    left: 22px;
+  }
+  .login-form__text {
+    left: 22px;
+  }
+  .login-form__username {
+    left: 22px;
+  }
+  .login-form__username input {
+    width: 278px;
+  }
+  .login-form__password {
+    left: 22px;
+  }
+  .login-form__password input {
+    width: 278px;
+  }
+  .login-form__remember {
+    left: 22px;
+  }
+  .login-form__forgot {
+    left: 170px;
+  }
+  .button {
+    width: 278px;
+    left: 22px;
+  }
+  .login-form__label {
+    position: absolute;
+width: 210px;
+height: 18px;
+left: 60px;
+top: 592px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #7D7D7D;
+  }
+  i {
+    left: 250px;
+  }
+}

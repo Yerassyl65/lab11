@@ -16,7 +16,7 @@
 	</header>
 	<main>
 		<div class="login">
-		<form class="login-form">
+		<form class="login-form" onsubmit="return validation();">
 			<div class="login-form__content">
 				<p class="login-form__welcome">
 					Welcome!
@@ -30,7 +30,7 @@
 			</div>
 			<div class="login-form__username">
 				<p class="login-form__username-text">User name</p>
-				<input class="login-form__input-username" type="text" placeholder="Enter your user name">
+				<input class="login-form__input-username" id="input_text" type="text" placeholder="Enter your user name">
 			</div>
 			<div class="login-form__password">
 				<p class="login-form__password-text">Password</p>
@@ -44,10 +44,13 @@
 				</div>
 			</div>
 			<div class="login-form__button">
-				<button class="button">Login</button>
+				<button class="button" id="login_btn">Login</button>
 			</div>
 			<div class="login-form__label">
 				<label class="label" for="register">Don’y have an Account ? </label><a id="register" href="./register/index.html">Register</a>
+			</div>
+			<div class="error">
+				<span class="error_msg">Invalid username or password. Please try again</span>
 			</div>
 			</div>
 		</form>

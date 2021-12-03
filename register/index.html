@@ -43,11 +43,11 @@
 			</div>
 			<div class="login-form__confirm">
 				<p class="login-form__confirm-text">Confrim Password</p>
-				<input type="password" name="password" placeholder="Confrim your Password">
-				<i class="bi bi-eye-slash eye2" id="togglePassword"></i>
+				<input type="password" name="password" placeholder="Confrim your Password" id="confirm_password">
+				<i class="bi bi-eye-slash eye2" id="togglePasswords"></i>
 			</div>
 			<div class="login-form__button">
-				<button class="button">Register</button>
+				<button class="button" id="sign_in_btn">Register</button>
 			</div>
 			<div class="login-form__label">
 				<label class="label" for="register">Already have an Account ? </label><a id="register" href="../index.html">Register</a>
@@ -60,5 +60,57 @@
 		</div>
 	</main>
 	<script src="../js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script >
+		 $(document).ready(function(){
+          
+          $("#confirm_password").bind('keyup change', function(){
+
+            check_Password( $("#password").val(), $("#confirm_password").val() )
+            
+            
+          })
+
+          $("#sign_in_btn").click(function(){
+
+            check_Password( $("#password").val(), $("#confirm_password").val() )
+
+          })
+        })
+
+        function check_Password( Pass, Con_Pass){
+
+          if(Pass === ""){
+
+            
+
+          }else if( Pass === Con_Pass){
+
+            $("#sign_in_btn").removeAttr("onclick")
+            $('#confirm_password').show()
+            $("#confirm_password").css('border' , '5px solid green')
+            $('#password').show()
+            $("#password").css('border', '5px solid green')
+
+            setTimeout(function() {
+                $('#confirm_password_msg').fadeOut('slow');
+            }, 3000);
+
+          }else{
+            $("#confirm_password").focus()
+            $('#confirm_password').show()
+            $("#confirm_password").css('border', '5px solid red')
+            $('#password').show()
+            $("#password").css('border', '5px solid red')
+
+            setTimeout(function() {
+                $('#confirm_password_msg').fadeOut('slow');
+            }, 3000);
+
+          }
+
+        };
+        
+	</script>
 </body>
 </html>
